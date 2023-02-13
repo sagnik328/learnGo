@@ -20,7 +20,7 @@ func main() {
 		"epsilon",
 		"pi",
 	}
-	wg.Add(9)
+	wg.Add(len(words))
 	//once we created a wait group we shouldnt copy them
 	for i, word := range words {
 		go printSomething(fmt.Sprintf("%d: %s", i, word), &wg)
